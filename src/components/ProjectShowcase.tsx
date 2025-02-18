@@ -134,16 +134,6 @@ const projects: Project[] = [
     • Omfattende offline-støtte`,
     image: "../../public/assets/intersikt.png",
     technologies: ["React Native", "Expo Go", "TypeScript", ".NET", "NO-SQL"],
-    // features: [
-    //   "Sanntids meldingsutveksling",
-    //   "Prosjekt- og oppgavestyring",
-    //   "Dokumenthåndtering",
-    //   "Video-konferanser",
-    //   "Offline-støtte",
-    //   "Push-varsler",
-    //   "Filsynkronisering",
-    //   "Team-samarbeid",
-    // ],
     highlights: [
       {
         icon: <DataObject />,
@@ -381,47 +371,6 @@ const ProjectShowcase: React.FC = () => {
             </Box>
           </Box>
 
-          {/* Features */}
-          {/* <Box sx={{ mb: 4 }}>
-            <Typography
-              variant="h6"
-              sx={{
-                mb: 2,
-                color: "#1a1f36",
-                fontSize: "1.1rem",
-                fontWeight: 600,
-              }}
-            >
-              Nøkkelfunksjoner
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 1,
-              }}
-            >
-              {project.features.slice(0, 3).map((feature) => (
-                <Chip
-                  key={feature}
-                  label={feature}
-                  sx={{
-                    bgcolor: alpha(theme.palette.primary.main, 0.08),
-                    color: theme.palette.primary.main,
-                    borderRadius: "8px",
-                    transition: "all 0.2s ease-in-out",
-                    cursor: "default",
-                    "&:hover": {
-                      bgcolor: alpha(theme.palette.primary.main, 0.15),
-                      transform: "translateY(-2px)",
-                    },
-                  }}
-                />
-              ))}
-            </Box>
-          </Box> */}
-
-          {/* Highlights */}
           <Box
             sx={{
               display: "grid",
@@ -493,26 +442,6 @@ const ProjectShowcase: React.FC = () => {
               flexWrap: "wrap",
             }}
           >
-            {/* <Button
-              variant="outlined"
-              onClick={() => setSelectedProject(project)}
-              sx={{
-                borderWidth: "2px",
-                borderRadius: "12px",
-                px: 3,
-                py: 1,
-                textTransform: "none",
-                fontWeight: 600,
-                transition: "all 0.2s ease-in-out",
-                "&:hover": {
-                  borderWidth: "2px",
-                  transform: "translateY(-2px)",
-                  boxShadow: "0 4px 12px rgba(37, 99, 235, 0.1)",
-                },
-              }}
-            >
-              Se Detaljer
-            </Button> */}
             {project.demoUrl && (
               <Button
                 variant="contained"

@@ -164,8 +164,6 @@ const HeroSection = () => {
         </Toolbar>
       </AppBar>
 
-      {/* Mobile Drawer */}
-      {/* Mobile Drawer */}
       <Drawer
         variant="temporary"
         anchor="right"
@@ -209,8 +207,16 @@ const HeroSection = () => {
           overflow: "hidden",
         }}
       >
-        <Container maxWidth="lg">
-          <Grid container spacing={4}>
+        <Container
+          maxWidth="lg"
+          sx={{
+            margin: "auto",
+            paddingLeft: { xs: 2, sm: 3, md: 4 },
+            paddingRight: { xs: 2, sm: 3, md: 4 },
+            paddingTop: { xs: 5, sm: 3, md: 4 },
+          }}
+        >
+          <Grid container spacing={3}>
             {/* Hero Text */}
             <Grid item xs={12} sx={{ textAlign: "center", mb: 6 }}>
               <Fade in timeout={1000}>
@@ -294,9 +300,13 @@ const HeroSection = () => {
               spacing={3}
               sx={{
                 justifyContent: "center",
+                alignItems: "center",
                 position: "relative",
                 zIndex: 1,
                 pb: { xs: 12, md: 8 },
+                margin: 0,
+                width: "100%",
+                boxSizing: "border-box",
               }}
             >
               {[
@@ -318,11 +328,25 @@ const HeroSection = () => {
                   description: "Robuste backend-løsninger og API-integrasjoner",
                 },
               ].map((service, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
+                <Grid
+                  item
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  key={index}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: 2,
+                    boxSizing: "border-box",
+                  }}
+                >
                   <Fade in timeout={2000 + index * 500}>
                     <Card
                       sx={{
-                        height: "100%",
+                        width: "100%",
+                        maxWidth: 345,
                         background:
                           "linear-gradient(145deg, rgba(255,255,255, 0.9) 0%, rgba(255,255,255, 0.95) 100%)",
                         backdropFilter: "blur(10px)",
@@ -333,6 +357,7 @@ const HeroSection = () => {
                         border: "1px solid",
                         borderColor: "rgba(37, 99, 235, 0.08)",
                         position: "relative",
+                        boxSizing: "border-box",
                         "&::before": {
                           content: '""',
                           position: "absolute",
@@ -360,7 +385,7 @@ const HeroSection = () => {
                         },
                       }}
                     >
-                      <CardContent sx={{ p: 4 }}>
+                      <CardContent sx={{ p: 4, boxSizing: "border-box" }}>
                         <Box
                           className="service-icon"
                           sx={{
@@ -409,34 +434,6 @@ const HeroSection = () => {
               ))}
             </Grid>
           </Grid>
-
-          {/* Scroll Indicator */}
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: { xs: 16, md: 32 },
-              left: "50%",
-              transform: "translateX(-50%)",
-              animation: "bounce 2s infinite",
-              zIndex: 0,
-              "@keyframes bounce": {
-                "0%, 100%": {
-                  transform: "translateX(-50%) translateY(0)",
-                },
-                "50%": {
-                  transform: "translateX(-50%) translateY(10px)",
-                },
-              },
-            }}
-          >
-            <KeyboardArrowDown
-              sx={{
-                fontSize: { xs: 32, md: 40 },
-                color: "primary.main",
-                opacity: 0.8,
-              }}
-            />
-          </Box>
         </Container>
       </Box>
     </Box>
