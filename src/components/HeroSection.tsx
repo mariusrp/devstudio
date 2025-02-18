@@ -25,7 +25,6 @@ import {
   CodeRounded,
   PhoneIphoneRounded,
   LanguageRounded,
-  KeyboardArrowDown,
   ArrowForward,
 } from "@mui/icons-material";
 
