@@ -71,7 +71,7 @@ const projects: Project[] = [
     • Automatiserte påminnelser og varsler
     • Omfattende administrativt dashboard
     • Detaljert rapportering og analyse`,
-    image: "../../public/assets/sauna.png",
+    image: "/assets/sauna.png",
     technologies: [
       "React",
       "TypeScript",
@@ -81,16 +81,6 @@ const projects: Project[] = [
       "VIPPS API",
       "Material-UI",
     ],
-    // features: [
-    //   "Sanntids tilgjengelighetsvisning",
-    //   "Automatisert booking og avbestilling",
-    //   "Integrert betalingsløsning",
-    //   "Brukertilpasset dashboard",
-    //   "Administrativt kontrollpanel",
-    //   "Automatiske påminnelser",
-    //   "Avansert bookingkalender",
-    //   "Statistikk og rapportering",
-    // ],
     highlights: [
       {
         icon: <Speed />,
@@ -132,7 +122,7 @@ const projects: Project[] = [
     • Integrert dokumenthåndtering med versjonskontroll
     • Video-konferanser med skjermdelingsmuligheter
     • Omfattende offline-støtte`,
-    image: "../../public/assets/intersikt.png",
+    image: "/assets/intersikt.png",
     technologies: ["React Native", "Expo Go", "TypeScript", ".NET", "NO-SQL"],
     highlights: [
       {
